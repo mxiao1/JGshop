@@ -19,8 +19,9 @@
 			<span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span>
 			<span class="icon-bar"></span> <span class="icon-bar"></span>
 		</button>
+		<p class="navbar-text" style="font-size: large;font-weight: bolder">江工二手交易系统</p>
 		<a class="navbar-brand" href="<%=basePath %>index.jsp?ceta=0"
-			style="font-size: 24px">江工学院物品交易(demo)</a>
+			style="margin: 0 0;padding: 0 0"><img src="<%=basePath%>static/image/jg.jpg" height="50" width="48"></a>
 	</div>
 
 	<!-- Collect the nav links, forms, and other content for toggling -->
@@ -30,9 +31,11 @@
 		<form action="search.jsp"
 			class="navbar-form navbar-left" role="search">
 			<div class="form-group">
-				<input type="text" name="key" class="form-control" placeholder="关键字">
+				<input type="text" name="key" class="form-control" placeholder="输入关键字查找物品">
 			</div>
-			<button type="submit" class="btn btn-default">查找物品</button>
+			<button type="submit" class="btn btn-default" aria-label="Left Align">
+				<span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+			</button>
 		</form>
 
 		<% UserHandle userHandle=new UserHandle();

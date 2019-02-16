@@ -11,8 +11,13 @@
 <jsp:include page="../site/head.jsp" />
 <base href=" <%=basePath%>">
 <title>注册-江工学院物品交易</title>
-<link href="src/index.css" rel="stylesheet">
-<link href="src/css/sign.css" rel="stylesheet">
+<%--<link href="src/index.css" rel="stylesheet">--%>
+<%--<link href="src/css/sign.css" rel="stylesheet">--%>
+<script src="https://cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
+<link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="src/css/style.css">
 
 </head>
 
@@ -35,11 +40,14 @@ if(!request.getAttribute("isPwdSame").equals("")){
 }
 %>
 	<div class="container">
-		<div class="xt_mid">
+		<%--<div class="xt_mid">--%>
+		<div class="form row">
+			<div class="form-horizontal col-md-offset-3" id="login_form">
 
 			<!--提交此form 注册 -->
 			<form action="user/register" method="post" class="form-horizontal">
 				<h2 class="form-signin-heading">注册账号</h2>
+				<div class="col-md-9">
 				<div class="form-group">
 					<label for="input_email" class="col-sm-2 control-label">邮箱</label>
 					<div class="col-sm-10">
@@ -56,7 +64,7 @@ if(!request.getAttribute("isPwdSame").equals("")){
 				</div>
 
 				<div class="form-group">
-					<label for="input_password2" class="col-sm-2 control-label">密码重复</label>
+					<label for="input_password2" class="col-sm-2 control-label">重输</label>
 					<div class="col-sm-10">
 						<input type="password" class="form-control" id="input_password2"
 							name="input_password2" placeholder="">
@@ -83,9 +91,12 @@ if(!request.getAttribute("isPwdSame").equals("")){
 						<button type="submit" class="btn btn-block btn-primary">注册</button>
 					</div>
 				</div>
+				</div>
 			</form>
+			</div>
 		</div>
 	</div>
+	<%--</div>--%>
 	<!-- /container -->
 	<jsp:include page="../site/footer.jsp" />
 </body>

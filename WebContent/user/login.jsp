@@ -12,8 +12,12 @@
 <jsp:include page="../site/head.jsp" />
 <base href=" <%=basePath%>">
 <title>登录-江工学院物品交易</title>
-<link href="src/css/sign.css" rel="stylesheet">
-
+<%--<link href="src/css/sign.css" rel="stylesheet">--%>
+<script src="https://cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
+<link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="src/css/style.css">
 </head>
 <body>
 	<jsp:include page="../site/header.jsp" flush="true" />
@@ -34,20 +38,36 @@ out.print("<div class=\"alert alert-danger\" role=\"alert\">"+loginInfo+"</div>"
 %>
 
 	<div class="container">
+		<div class="form row">
+			<div class="form-horizontal col-md-offset-3" id="login_form">
 		<form class="form-signin" action="LoginServlet" Method="Post">
 			<h2 class="form-signin-heading">登录网站</h2>
-			<label for="inputEmail" class="sr-only">Email address</label> <input
-				type="email" id="inputEmail" class="form-control" name="inputEmail"
-				placeholder="邮箱地址" required autofocus> <label
-				for="inputPassword" class="sr-only">Password</label> <input
-				type="password" id="inputPassword" class="form-control"
+			<div class="col-md-9">
+				<div class="form-group">
+					<%--<i class="fa fa-user fa-lg"></i>--%>
+			<%--<label for="inputEmail" class="sr-only">Email address</label> --%>
+			<input type="email" id="inputEmail" class="form-control" name="inputEmail"
+				placeholder="邮箱地址" required autofocus>
+				</div>
+			<%--<label for="inputPassword" class="sr-only">Password</label>--%>
+				<div class="form-group">
+					<%--<i class="fa fa-user fa-lg"></i>--%>
+			<input type="password" id="inputPassword" class="form-control"
 				name="inputPassword" placeholder="密码" required>
+				</div>
 			<div class="checkbox">
+				<div class="form-group">
 				<label> <input type="checkbox" name="auto_login">
 					下次自动登录 </label>
+				</div>
 			</div>
+				<div class="form-group col-md-offset-9">
 			<button class="btn btn-lg btn-primary btn-block" type="submit">登录</button>
+				</div>
+			</div>
 		</form>
+			</div>
+		</div>
 	</div>
 	<!-- /container -->
 	<jsp:include page="../site/footer.jsp" />
