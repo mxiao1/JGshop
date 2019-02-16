@@ -44,9 +44,11 @@ public class RegisterServlet extends HttpServlet {
 						if (isRegister) {
 							request.getRequestDispatcher("/user/login.jsp")
 									.forward(request, response);
+							return;
 						} else {
 							request.getRequestDispatcher("/user/register.jsp")
 									.forward(request, response);
+							return;
 						}
 					} else {
 						isPwdSame="两次密码不相同";
@@ -61,6 +63,7 @@ public class RegisterServlet extends HttpServlet {
 				request.setAttribute("isRegister",isRegister);
 				request.getRequestDispatcher("/user/login.jsp").forward(
 						request, response);
+				return;
 			}else{
 				request.setAttribute("isRegister",false);
 				request.setAttribute("isPwdSame",isPwdSame);
@@ -68,6 +71,7 @@ public class RegisterServlet extends HttpServlet {
 				request.setAttribute("isEmail",isEmail);
 				request.getRequestDispatcher("/user/register.jsp").forward(
 						request, response);
+				return;
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
