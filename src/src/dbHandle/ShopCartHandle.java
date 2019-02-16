@@ -23,7 +23,7 @@ public class ShopCartHandle {
     //获取user购物车物品数量
     //不一致性标记：为什么用id作参数？
     public Integer getShopCartNum(int id) throws Exception {
-        String sql = "SELECT count(goodsId) FROM ShoppingCart WHERE userId=?";
+        String sql = "SELECT count(goodsId) FROM shoppingcart WHERE userId=?";
         this.pstmt = this.conn.prepareStatement(sql);
         this.pstmt.setInt(1, id);
         ResultSet rs = this.pstmt.executeQuery();

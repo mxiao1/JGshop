@@ -15,7 +15,7 @@ String isCache=request.getParameter("cache");
 if(isCache!=null && isCache.equals("0")){
 	response.setHeader("Pragma","No-cache");
 	response.setHeader("Cache-Control","no-cache");
-	response.setDateHeader("Expires", 0);
+	response.setDateHeader("Expires", -1);
 }
 %>
 <%

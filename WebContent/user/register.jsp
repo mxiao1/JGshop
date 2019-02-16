@@ -10,7 +10,7 @@
 <head>
 <jsp:include page="../site/head.jsp" />
 <base href=" <%=basePath%>">
-<title>注册-合肥学院物品交易</title>
+<title>注册-江工学院物品交易</title>
 <link href="src/index.css" rel="stylesheet">
 <link href="src/css/sign.css" rel="stylesheet">
 

@@ -3,7 +3,7 @@
 <%@page import="org.w3c.dom.UserDataHandler"%>
 <%@page import="src.dbHandle.GoodsHandle"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
+	pageEncoding="UTF-8" %>
 <%@ page language="java"%>
 <%@ page
 	import="java.text.SimpleDateFormat,java.sql.*,java.lang.Math,src.tools.*,javax.servlet.http.HttpSession,java.util.*,src.vo.*"%>
@@ -42,7 +42,7 @@
 <head>
 <base href="<%=basePath%>">
 <jsp:include page="site/head.jsp" />
-<title>物品交易-合肥学院-首页</title>
+<title>物品交易-江工学院-首页</title>
 </head>
 <body>
 	<jsp:include page="site/header.jsp" />

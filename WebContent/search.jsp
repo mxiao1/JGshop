@@ -33,7 +33,7 @@ if(request.getParameter("key")==null || request.getParameter("key").length()==0)
 <head>
 <base href="<%=basePath%>">
 <jsp:include page="site/head.jsp" />
-<title>物品交易-合肥学院-首页</title>
+<title>物品交易-江工学院-首页</title>
 </head>
 <body>
     <jsp:include page="site/header.jsp" />
